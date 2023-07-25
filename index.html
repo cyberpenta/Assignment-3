@@ -5,10 +5,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Brust</title>
+    <!-- Fav icon -->
     <link rel="icon" type="image/x-icon" href="./images/fav.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind And DaisyUi -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font awsome Icons -->
+    <script src="https://kit.fontawesome.com/bd5a712511.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+    <!-- Custom tailwind Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        "prime-bg": '#F85559',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<header class="conatainer mx-auto space-y-10 mt-5">
+    <!-- Navbar Section -->
+    <div
+        class="navbar lg:bg-prime-bg items-center lg:rounded-full lg:px-16 lg:py-4 flex-row-reverse lg:flex-row lg:w-4/5 lg:mx-auto justify-around">
+        <ul class="lg:flex-1 lg:gap-6 hidden lg:flex text-white font-medium text-lg">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">All Fruites</a></li>
+        </ul>
+
+        <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#121212" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </label>
+            <ul tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-44 relative -left-40 m-auto items-center">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruites</a></li>
+            </ul>
+        </div>
+
+        <div class="flex-1 lg:gap-2">
+            <img class=" w-10 lg:w-12" src="./images/logo.png" alt="">
+            <a class="btn btn-ghost normal-case text-4xl lg:text-white">Fruit Burst</a>
+        </div>
+        <div class="flex-none  gap-2 hidden lg:flex">
+            <div class="form-control">
+                <label for="search" class="border-none">
+                    <input id="search" type="text" placeholder="Search here"
+                        class="input input-bordered w-24 px-10 py-2 md:w-auto rounded-full" /><a
+                        class="relative -left-12 text-[#121212]" href=""><i
+                            class="fa-solid fa-magnifying-glass"></i></a>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Hero section -->
+    <section class="w-5/6 mx-auto lg:w-4/5 lg:mx-auto space-y-4">
+
+        <div class="carousel w-full h-[190px] lg:h-[550px] rounded-lg">
+            <div id="slide1" class="carousel-item relative w-full flex justify-center items-center"
+                style="background-image: url('./images/banner1.png'), linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)); background-repeat: no-repeat; background-size: cover;">
+                <div class="flex justify-center">
+                    <div class=" space-y-1 lg:space-y-7 text-center text-[#fff] w-4/5 mx-auto">
+                        <h2 class="font-extrabold text-2xl lg:text-7xl">Exotic tastes at your <br> doorstep</h2>
+                        <p class="font-medium lg:text-xl">We supply highly quality organic products</p>
+                        <button class="btn bg-prime-bg border-none text-[#fff]">Shop Now</button>
+                    </div>
+                </div>
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 -ml-3 -mr-3 lg:ml-0 lg:mr-0">
+                    <a href="#slide4" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❮</a>
+                    <a href="#slide2" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full flex justify-center items-center"
+                style="background-image: url('./images/banner2.png'), linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)); background-repeat: no-repeat; background-size: cover;">
+                <div class="flex justify-center">
+                    <div class=" space-y-1 lg:space-y-7 text-center text-[#fff] w-4/5 mx-auto">
+                        <h2 class="font-extrabold text-2xl lg:text-7xl">Exotic tastes at your <br> doorstep</h2>
+                        <p class="font-medium lg:text-xl">We supply highly quality organic products</p>
+                        <button class="btn bg-prime-bg border-none text-[#fff]">Shop Now</button>
+                    </div>
+                </div>
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 -ml-3 -mr-3 lg:ml-0 lg:mr-0">
+                    <a href="#slide1" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❮</a>
+                    <a href="#slide3" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full flex justify-center items-center"
+                style="background-image: url('./images/banner3.png'), linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)); background-repeat: no-repeat; background-size: cover;">
+                <div class="flex justify-center">
+                    <div class=" space-y-1 lg:space-y-7 text-center text-[#fff] w-4/5 mx-auto">
+                        <h2 class="font-extrabold text-2xl lg:text-7xl">Exotic tastes at your <br> doorstep</h2>
+                        <p class="font-medium lg:text-xl">We supply highly quality organic products</p>
+                        <button class="btn bg-prime-bg border-none text-[#fff]">Shop Now</button>
+                    </div>
+                </div>
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 -ml-3 -mr-3 lg:ml-0 lg:mr-0">
+                    <a href="#slide2" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❮</a>
+                    <a href="#slide4" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full flex justify-center items-center"
+                style="background-image: url('./images/banner4.png'), linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)); background-repeat: no-repeat; background-size: cover;">
+                <div class="flex justify-center">
+                    <div class=" space-y-1 lg:space-y-7 text-center text-[#fff] w-4/5 mx-auto">
+                        <h2 class="font-extrabold text-2xl lg:text-7xl">Exotic tastes at your <br> doorstep</h2>
+                        <p class="font-medium lg:text-xl">We supply highly quality organic products</p>
+                        <button class="btn bg-prime-bg border-none text-[#fff]">Shop Now</button>
+                    </div>
+                </div>
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 -ml-3 -mr-3 lg:ml-0 lg:mr-0">
+                    <a href="#slide3" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❮</a>
+                    <a href="#slide1" class="btn btn-circle bg-black border-none text-white text-sm lg:text-base">❯</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</header>
 
 <body>
 
